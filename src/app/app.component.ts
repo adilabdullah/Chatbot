@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {PythonApisService} from './python-apis.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ChatBot';
+  title = 'Customer Engagement Chatbot';
+  route: string;
+
+  constructor(private router: Router) { 
+    this.route = router.url; 
+  }
+
 }
